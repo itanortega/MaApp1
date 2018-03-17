@@ -16,6 +16,17 @@
         app:layout_constraintTop_toTopOf="parent"
         android:padding="@dimen/padding_general1">
 
+        <TextView
+            android:id="@+id/lbl_val_exa"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_1"
+            android:textAlignment="center"
+            android:textColor="@color/icons"
+            android:background="@color/secondary_text"
+            android:layout_gravity="center_vertical"
+            android:textSize="24dp"
+            android:text="@string/val_ex" />
+
         <!-- Red -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,7 +44,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_2"
                 android:max="255"
-                android:progress="128" />
+                android:progress="128"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/lbl_val_red"
+                style="@style/label"
+                android:text="@string/val_ini" />
         </LinearLayout>
 
         <!-- Green -->
@@ -53,7 +70,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_2"
                 android:max="255"
-                android:progress="128"/>
+                android:progress="128"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/lbl_val_green"
+                style="@style/label"
+                android:text="@string/val_ini" />
         </LinearLayout>
 
         <!-- Blue -->
@@ -73,7 +96,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_2"
                 android:max="255"
-                android:progress="128"/>
+                android:progress="128"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/lbl_val_blue"
+                style="@style/label"
+                android:text="@string/val_ini" />
         </LinearLayout>
 
         <!-- Alpha -->
@@ -93,7 +122,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_2"
                 android:max="255"
-                android:progress="128"/>
+                android:progress="128"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/lbl_val_alpha"
+                style="@style/label"
+                android:text="@string/val_ini" />
         </LinearLayout>
 
         <FrameLayout
