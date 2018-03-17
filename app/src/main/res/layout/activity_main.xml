@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_2"
                 android:max="255"
-                android:progress="128"/>
+                android:progress="128" />
         </LinearLayout>
 
         <!-- Green -->
