@@ -4,6 +4,9 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -70,5 +73,79 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.iteTransparent:
+                sbrAlpha.setProgress(0);
+                break;
+
+            case R.id.iteSemiransparent:
+                sbrAlpha.setProgress(128);
+                break;
+
+            case R.id.iteOpaque:
+                sbrAlpha.setProgress(255);
+                break;
+
+            case R.id.iteRed:
+                sbrRed.setProgress(255);
+                sbrGreen.setProgress(0);
+                sbrBlue.setProgress(0);
+                break;
+
+            case R.id.iteGreen:
+                sbrRed.setProgress(0);
+                sbrGreen.setProgress(255);
+                sbrBlue.setProgress(0);
+                break;
+
+            case R.id.iteBlue:
+                sbrRed.setProgress(0);
+                sbrGreen.setProgress(0);
+                sbrBlue.setProgress(255);
+                break;
+
+            case R.id.iteBlack:
+                sbrRed.setProgress(0);
+                sbrGreen.setProgress(0);
+                sbrBlue.setProgress(0);
+                break;
+
+            case R.id.iteWhite:
+                sbrRed.setProgress(255);
+                sbrGreen.setProgress(255);
+                sbrBlue.setProgress(255);
+                break;
+
+            case R.id.iteCyan:
+                sbrRed.setProgress(0);
+                sbrGreen.setProgress(255);
+                sbrBlue.setProgress(255);
+                break;
+
+            case R.id.iteMagenta:
+                sbrRed.setProgress(255);
+                sbrGreen.setProgress(0);
+                sbrBlue.setProgress(255);
+                break;
+
+            case R.id.iteYellow:
+                sbrRed.setProgress(255);
+                sbrGreen.setProgress(255);
+                sbrBlue.setProgress(0);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
