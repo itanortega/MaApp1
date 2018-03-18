@@ -5,4 +5,6 @@
     <dimen name="height_1">40dp</dimen>
     <dimen name="height_2">25dp</dimen>
     <dimen name="width_lbl_1">55dp</dimen>
+    <dimen name="width_lbl_2">75dp</dimen>
+    <dimen name="height_3">35dp</dimen>
 </resources>

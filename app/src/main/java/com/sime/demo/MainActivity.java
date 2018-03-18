@@ -1,5 +1,6 @@
 package com.sime.demo;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         sbrGreen.setOnSeekBarChangeListener(this);
         sbrBlue.setOnSeekBarChangeListener(this);
         sbrAlpha.setOnSeekBarChangeListener(this);
-        
+
         registerForContextMenu(vieColor);
     }
 
@@ -108,6 +109,16 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
     public void changeColor(MenuItem item){
         switch (item.getItemId()){
+            case R.id.iteAboutOf:
+                Intent intent = new Intent(this, Main2Activity.class);
+                intent.putExtra("programa", "Maestría en ingeniería computacional");
+                intent.putExtra("asignatura", "Programación para Ambientes Ubicuos y Distribuidos");
+                intent.putExtra("docente", "Cesar Augusto Franco Estrada");
+                intent.putExtra("alumno", "Christian Segundo Ortega");
+                intent.putExtra("codigo", "27017220141");
+                startActivity(intent);
+                break;
+
             case R.id.iteTransparent:
                 sbrAlpha.setProgress(0);
                 break;

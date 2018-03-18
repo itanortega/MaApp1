@@ -15,4 +15,8 @@
     <string name="AboutOf">AboutOf</string>
     <string name="val_ini">(128)</string>
     <string name="val_ex">#80808080</string>
+    <string name="programa">Program:</string>
+    <string name="Docente">Teacher:</string>
+    <string name="Codigo">Code:</string>
+    <string name="Alumno">Student:</string>
 </resources>
